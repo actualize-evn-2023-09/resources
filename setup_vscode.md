@@ -16,7 +16,7 @@
 ## Configure your VSCode preferences
 
 - In the VSCode menu, click on `View -> Command Palette...`
-- In the prompt, search for `Preferences: Open Settings (JSON)` and click or press enter.
+- In the prompt, search for `Preferences: Open User Settings (JSON)` and click or press enter.
 - In the `settings.json` file that opens, replace the text with the following:
   ```
   {
