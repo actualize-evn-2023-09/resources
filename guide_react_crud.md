@@ -100,6 +100,15 @@
   
 - In your browser, visit http://localhost:5173 to make sure your app is working!
 
+FIX FOR PROPS TYPE ERROR:
+Add this line of code to your `eslintrc.cjs` file `rules` object:
+```
+ rules: {
+    "react/prop-types": "off", <<<<<<< ADD THIS LINE!
+    "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+  },
+```
+
 ## CRUD Single Page Application
 
 - Index action
