@@ -25,6 +25,11 @@
 - Walk through your code line by line _as if you are the computer_
 - Keep track of variables (by writing them down!) as they get updated
 
+Ask yourself these questions: 
+1) Does your code have errors? Is your output what you expect it to be?
+2) Does your code solve the original question?
+3) Does your code take in to account any edge cases or different inputs?
+
 ### Refactor - 5%
 
 - Describe the efficiency of your algorithm using **Big O notation**.
