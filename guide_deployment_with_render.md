@@ -75,9 +75,16 @@
     ```
    - Once you configure cors, push the changes to GitHub to redeploy the backend
 
-- In the frontend code, configure all production web requests to use the deployed backend url
-  - Example `axios` configuration for your `main.jsx` file:
+- In your frontend codebase, configure the base url axios uses to make web requests to work locally _and_ on production by including your deployed backend url
+  - Here is the `axios` configuration for your `main.jsx` file:
     ```javascript
-    axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "<your-backend-url>";
+    axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "your-backend-url";
     ```
-   - Once you configure the web request urls, push the changes to GitHub to redeploy the frontend
+   - Once you configure the base web request url, you'll need to modify EVERY axios web request you make:
+    ```javascript
+    axios.get("https://localhost:3000/recipes.json") 
+
+    // becomes:
+    axios.get("/recipes.json")
+    ```
+   - Commit and push the changes up to GitHub to redeploy the frontend
